@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container">
+    <form id="new-hour" action="/hours/new/{{ daily_id }}" method="post">
+        <div class="form-group">
+            <label for="start">Start</label>
+            <input type="text" id="start" class="form-control" name="start">
+        </div>
+         <div class="form-group">
+            <label for="end">End</label>
+            <input type="text" id="end" class="form-control" name="end">
+        </div>
+        <div class="form-group">
+            <label for="action">Action</label>
+            <textarea id="action" class="form-control" name="action"></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-success">Add</button>
+    </form>
+</div>
+{% endblock %}

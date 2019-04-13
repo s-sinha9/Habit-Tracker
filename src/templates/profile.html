@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+<h3 class="text-uppercase mb-4 white-text wow fadeInDown" data-wow-delay="0.4s">
+                       <strong> Welcome {{ email }}</strong></h3>
+<div class="col-md-12 mb-4 white-text text-center">
+
+                    <hr class="hr-light my-4 wow fadeInDown" data-wow-delay="0.4s">
+
+    <a href="/daily"><button class="btn btn-primary">Days</button></a>
+    <a href="/goals"><button class="btn btn-primary">Goals</button></a>
+</div>
+
+{% endblock %}

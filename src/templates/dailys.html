@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container">
+    <h2>{{ email }}'s Days</h2>
+    <form action="/daily/new" method="post">
+        <button type="submit" class="btn btn-success">Add Today</button>
+    </form>
+    {% if dailys|length > 0 %}
+        {% for daily in dailys|reverse %}
+        <h3><strong><a href="/hours/{{ daily._id }}">{{ daily.title }}</a></strong></h3>
+        <p>{{ daily.description }}</p>
+        <hr>
+    {% endfor %}
+    {% else %}
+        <h4>There aren't any days yet! Get started now.</h4>
+    {% endif %}
+
+</div>
+{% endblock %}
